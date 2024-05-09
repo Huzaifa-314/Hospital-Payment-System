@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt</title>
+    <style>
+        /* Add your custom styles for the receipt here */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .receipt-container {
+            width: 300px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .receipt-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .receipt-header h2 {
+            margin: 0;
+        }
+        .receipt-info {
+            margin-bottom: 20px;
+        }
+        .receipt-info p {
+            margin: 5px 0;
+        }
+        .receipt-total {
+            text-align: right;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="receipt-container">
+        <div class="receipt-header">
+            <h2>Receipt</h2>
+        </div>
+        <div class="receipt-info">
+            <p><strong>Transaction ID:</strong> <?php echo $tran_id; ?></p>
+            <p><strong>Transaction Date:</strong> <?php echo $tran_date; ?></p>
+            <p><strong>Amount Paid:</strong> <?php echo $amount; ?></p>
+            <p><strong>Payment Method:</strong> <?php echo $card_type; ?></p>
+        </div>
+        <div class="receipt-total">
+            <p><strong>Total Paid:</strong> <?php echo $amount; ?></p>
+        </div>
+    </div>
+</body>
+</html>
